@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<title>learn language</title>
+		
+			
+<style>    
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    
+}
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color:greenyellow;
+    position: fixed;
+    height: 100px!important;
+    overflow: hidden;
+    z-index: 8;
+    border: 3px solid black;
+}
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 100px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    font-size:35px;
+    width: 300px;
+    margin-top: 100px;
+    transform: translateX(-300px);
+    transition: transform 500ms ease-in-out;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+}
+.sidebarMenuInner {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+}
+.sidebarMenuInner li {
+  list-style: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+}
+.sidebarMenuInner li span {
+  display: block;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+}
+.sidebarMenuInner li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 22px;
+  left: 15px;
+  height: 22px;
+  width: 22px;
+  }
+  .spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 10px;
+  width: 50px;
+  background-color: #fff;
+}
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 26px;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -20px;
+}
+.mainbody{
+	width:100%;
+	height:1700px;
+background:url(back.jpg)no-repeat;
+padding-top:80px;
+background-size:cover;
+color:;
+font-size:50px;
+}
+
+.head{
+width:100%;
+height:200px;
+background:yellow;
+color: black;
+text-align:center;
+font-size:80px;
+text-decoration: none;
+border: 2px solid black;
+}
+.head:hover{
+width:100%;
+height:200px;
+background:green;
+color: black;
+text-align:center;
+font-size:80px;
+text-decoration: none;
+border: 2px solid black;
+}
+.code{
+width:100%;
+height:160px;
+background: ;
+font-size:70px;
+text-align:center;
+color:white;
+text-decoration: none;
+border: 3px solid black;
+background:rgb( 255, 255, 255, 0.4);
+}
+.code:hover{
+width:100%;
+height:160px;
+background: orange;
+font-size:70px;
+text-align:center;
+color:white;
+text-decoration: none;
+border: 3px solid black;
+}
+.ler{
+width:100%;
+height:160px;
+background: lime;
+font-size:70px;
+text-align:center;
+color:black;
+text-decoration: none;
+border: 3px solid black;
+	}
+.lan{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color: white;
+}
+.lan:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.lana{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+}
+.lana:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.la{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+}
+.la:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.le{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+
+}
+.le:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.l{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+}
+.l:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.lm{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+
+}
+.lm:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.sec{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+}
+.sec:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.se{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+
+}
+.se:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.fi{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+}
+.fi:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+.fe{
+width:300px;
+height:200px;
+background:green;
+float:left;
+border: 3px solid black;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:white;
+
+
+}
+.fe:hover{
+width:300px;
+height:200px;
+background:yellow;
+float:left;
+border: 3px solid red;
+margin-left:20%;
+margin-top:10px;
+border-radius:50%;
+text-align: center;
+margin-top:60px;
+color:black;
+}
+</style>
+
+</head>
+<body>
+	<div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <a href="home_page.html"><li><i>HOME</i></li></a>
+      <a href="learn_lang.html"><li>Learn languages</li></a>
+      <a href="convert_text_to_code.html"><li>SMS Convert  </li></a>
+      <a href="project.html"><li>OUR project</li></a>
+     
+      
+      
+      <a href="#"><li>contact me 9307084680</li></a>
+      
+    </div>
+    
+<div class="mainbody">
+	
+<a href="html_css.html">    <div class="lan" >
+         	
+          <br>	Html <br>or css 
+         </div></a>
+         <a href="python.html">   <div class="lana" >
+         	
+         	   <br>Python
+         </div></a>
+         <a href="js.html">   <div class="la" >
+         	
+         	   <br>  Java <br>Script
+         </div></a>
+          <a href="c.html">  <div class="le" >
+         	
+         	   <br> C<br>
+         </div></a>
+            <a href="c_plus.html">  <div class="l" >
+         	
+         	  <br> C++ <br> 
+         </div></a>
+          <a href="java.html">  <div class="lm" >
+         	
+         	  <br> Java<br> 
+         </div></a>
+             <a href="kotline.html">   <div class="sec" >
+         	
+         	  <br> Kotlin <br> 
+         </div></a>
+          <a href="php.html">  <div class="se" >
+         	
+         	   <br> php <br> 
+         </div></a>
+              <a href="sql.html">  <div class="fi" >
+         	
+         	  <br> SQL<br> 
+         </div></a>
+         <a href="rubby.html">   <div class="fe" >
+         	
+         	   <br> Ruby<br> 
+         </div></a>
+	
+	
+    
+    
+</div>  
+</body>
+</html>
